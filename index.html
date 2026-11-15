@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пресс каждый день — план и отметки</title>
+    <meta name="description" content="Трекер тренировок на пресс: план на каждый день недели, чек-лист упражнений, таймер для планки, стрик и история. Отмечай сделанное и возвращай форму.">
+    <meta name="theme-color" content="#0d0f0e">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2032%2032'%3E%3Crect%20width='32'%20height='32'%20rx='7'%20fill='%23c7f55c'/%3E%3Cpath%20d='M10%2010v12M22%2010v12M10%2016h12'%20fill='none'%20stroke='%230d0f0e'%20stroke-width='3'%20stroke-linecap='round'/%3E%3C/svg%3E">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="head">
+        <div class="container head__inner">
+            <p class="logo">ПРЕСС<span class="logo__dot">/</span>ДЕНЬ</p>
+            <p class="head__date" id="today-date"></p>
+        </div>
+    </header>
+
+    <main>
+
+        <section class="today container">
+            <div class="section__head">
+                <h1>Сегодня — <span id="day-name">загрузка</span></h1>
+                <p id="day-note"></p>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span class="stat__value" id="stat-progress">0%</span>
+                    <span class="stat__label">сделано</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value" id="stat-streak">0</span>
+                    <span class="stat__label">дней подряд</span>
+                </div>
+                <div class="stat">
+                    <span class="stat__value" id="stat-week">0</span>
+                    <span class="stat__label">из 7 дней</span>
+                </div>
+            </div>
+
+            <div class="bar"><span class="bar__fill" id="bar-fill"></span></div>
+
+            <ul class="checklist" id="checklist"></ul>
+
+            <div class="today__actions">
+                <button class="btn" id="reset-day" type="button">Сбросить день</button>
+                <p class="today__hint" id="today-hint"></p>
+            </div>
+        </section>
+
+        <section class="plan container">
+            <div class="section__head">
+                <h2>План на неделю</h2>
+                <p>Каждый день свой акцент, 10–15 минут. Отдых между подходами 30–40 секунд, дыхание не задерживай.</p>
+            </div>
+
+            <div class="plan__tabs" id="plan-tabs"></div>
+            <div class="plan__body" id="plan-body"></div>
+        </section>
+
+        <section class="history container">
+            <div class="section__head">
+                <h2>История</h2>
+                <p>Последние 14 дней. Яркий — день закрыт полностью.</p>
+            </div>
+
+            <div class="history__grid" id="history"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer container">
+        <p>Трекер для себя · <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
